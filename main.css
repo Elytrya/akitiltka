@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+
+
+
+
+img{
+  width: 30px;
+
+  margin: 10px 10px 10px;
+  padding-bottom: 100px;
+  opacity: 0.5;
+
+  transition: 0.3s ease;
+  color: white;
+}
+img:hover{
+  opacity: 1;
+  transition: 0.3s ease;
+
+}
+.p{
+  color: bl;
+  margin-top: 50px;
+  color: #ffffff;
+  text-shadow: #ffffff 12px 12px 10px;
+  opacity: 0.5;
+  transition: 0.3s ease;
+  font-family: 'Pacifico', cursive;
+
+
+}
+.p:hover{
+  opacity: 1;
+  transition: 0.3s ease;
+}
+
+
+.header-dark {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #ffffff, #000000);
+  background-blend-mode: multiply;
+  z-index: 1;
+  overflow: hidden;
+}
+.button-portalbot{
+  padding: 15px 10px;
+}
+.buttonss{
+  color: #ffffff;
+  padding: 15px 10px;
+
+}
+h1{
+    animation: text 5s ease;
+  }
+  
+  
+  h1{
+      text-align: center;
+      padding: 10px;
+  }
+  a{
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+  }
+  
+.header-dark img {
+
+  margin-bottom: 20px;
+}
+
+.header-dark h1 {
+
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.header-dark p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+
+
+
+.header-light h1 {
+  font-size: 48px;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+
+
+.footer h1 {
+  font-size: 48px;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.button-container {
+  margin-top: 30px;
+}
+.fade-in {
+  animation: fade-in 1s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fade-in {
+  to {
+      opacity: 1;
+  }
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #333333;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+
+}
+
+.button:hover {
+  background-color: #555555;
+}
