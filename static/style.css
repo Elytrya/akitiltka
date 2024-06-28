@@ -1,0 +1,133 @@
+footer{
+    background: linear-gradient(90deg, rgb(255, 94, 236) 0%, rgb(224, 183, 244) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    margin: 10px;
+  }
+  
+  
+  .spidernodes-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #262626; /* зеленый цвет */
+    color: #fff; /* белый цвет текста */
+    text-decoration: none; /* удаление подчеркивания */
+    border-radius: 20px; /* закругление углов */
+    transition: background-color 0.3s; /* плавный переход */
+    padding: 20px; /* Внутренний отступ блока */
+    margin-left: 20px;
+    margin-top: 20px;
+  
+  }
+  
+  .spidernodes-button:hover {
+    background-color: #252626; /* темнозеленый цвет при наведении */
+  }
+  
+  
+  
+  
+  .html-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* отступ между логотипом и заголовком */
+  }
+  
+  .html-logo img {
+    width: 50px; /* задайте размер логотипа HTML */
+    height: auto;
+    margin-right: 10px; /* отступ между логотипом и текстом */
+  }
+  
+  
+  
+  .projects-h2{
+    text-align: center;
+    color: white;
+    margin: 350px;
+    font-size: 40px;
+  }
+  a{
+    font-size: 20px;
+  }
+  .profile-picture{
+    box-shadow: 20px 20px 130px rgb(247, 0, 255);
+  }
+  
+  
+  .left-info {
+    margin-right: 20px; /* Отступ справа от границ сайта */
+  }
+  
+  .completed {
+    background: linear-gradient(90deg, rgb(255, 94, 236) 0%, rgb(207, 128, 243) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .loading {
+    background: linear-gradient(90deg, rgb(255, 94, 236) 0%, rgb(207, 128, 243) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .pause {
+    background: linear-gradient(90deg, rgb(255, 94, 236) 0%, rgb(207, 128, 243) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+    .add{
+      font-size: 30px;
+      color: gray;
+    }
+    .info{
+      font-size: 20px;
+      color: gray;
+    }
+    body {
+      background-color: #171717;
+      font-family: "Ubuntu Mono", monospace;
+    }
+    .left-info {
+      text-align: left;
+      color: white;
+      margin-left: 100px;
+      margin: 100px;
+    } 
+    .profile-picture {
+      width: 100px; /* Размер по вашему выбору */
+      height: 100px; /* Размер по вашему выбору */
+      border-radius: 50%; /* Сделаем круглый */
+      transition: transform 0.3s; /* Добавим плавное изменение при наведении */
+    }
+    .profile-picture:hover {
+      transform: scale(1.2); /* Увеличение при наведении */
+    }
+  
+    .profile-picture:hover {
+      transform: scale(1.2); /* Увеличение при наведении */
+    }
+    h1{
+      font-size: 40px;
+    }
+    h1::after {
+      content: "elytrya__"; /* Добавляем "__" после заголовка */
+      background: rgb(226,77,32);
+      background: linear-gradient(90deg, rgb(208, 0, 255) 0%, rgb(220, 195, 232) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  
+  
+  
+  
+  
+  
+  
