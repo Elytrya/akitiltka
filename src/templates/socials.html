@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио - Elytrya__</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #121212;
+      color: #b0b0b0;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    a {
+      color: #8b0000;
+      text-decoration: overline;
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out both;
+    }
+    .slide-in {
+      animation: slideIn 0.4s ease-out both;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideIn {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .hover-darken:hover {
+      background-color: #0e0e0e;
+    }
+
+    /* Стилизация прокрутки для веб-кит браузеров */
+    ::-webkit-scrollbar {
+      width: 10px; /* Ширина полосы прокрутки */
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #1e1e1e; /* Цвет трека (фона полосы прокрутки) */
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #4e4a4a; /* Цвет ползунка */
+      border-radius: 10px; /* Скругленные углы ползунка */
+      border: 2px solid #121212; /* Обводка ползунка */
+      transition: background-color 1s ease, transform 1s ease; /* Плавная анимация изменения цвета и трансформации */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #6d6868; /* Цвет ползунка при наведении */
+      transform: scale(1.1); /* Увеличение ползунка при наведении */
+    }
+    .card {
+      border-radius: 20px;
+    }
+
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px; /* Закругление углов для всех контейнеров */
+      transition: transform 0.3s ease;
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05); /* Увеличение контейнера при наведении */
+    }
+
+    .project-card:hover::before {
+      border-color: #8b0000;
+      box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
+    }
+
+    .project-card img {
+      border-radius: 20px; /* Закругление углов для изображений */
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <header class="text-center py-8 fade-in slide-in">
+    <h1 class="text-5xl font-bold text-gray-300">Социальные сети</h1>
+    <p class="text-gray-500 mt-2">Путешествие в бездну</p>
+  </header>
+
+  <main class="flex-grow flex flex-col items-center fade-in">
+
+    <section class="my-8 slide-in">
+      <h2 class="text-3xl font-semibold text-gray-400 mb-4">Мои работы</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl">
+        <div class="project-card bg-gray-800 p-4 rounded shadow-md hover:shadow-lg transition-shadow hover-darken fade-in slide-in">
+          <img src="https://play-lh.googleusercontent.com/Wvjx6rVlC1rGWKkln3r-23ICKV--sxEEUuq7jd15BeJan8v-wS7TGwm0NHXqqon18w" alt="Проект 1" class="card w-full h-auto rounded mb-9">
+          <h3 class="text-2xl font-semibold text-gray-300">Discord</h3>
+          <p class="text-gray-500">Дискорд: akirula</p>
+        </div>
+        <div class="project-card bg-gray-800 p-4 rounded shadow-md hover:shadow-lg transition-shadow hover-darken fade-in slide-in">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQl0CVO9O9uL-SsgHyeMOF_m_Pk_wmYKlPBQ&s" alt="Проект 2" class="card w-full h-auto rounded mb-4">
+          <h3 class="text-2xl font-semibold text-gray-300">Telegram</h3>
+          <p class="text-gray-500">Лучший и оптимальный способ для связи. <a href="https://t.me/akitiltka">Вот телеграм (клик)</a></p>
+        </div>
+        <div class="project-card bg-gray-800 p-4 rounded shadow-md hover:shadow-lg transition-shadow hover-darken fade-in slide-in">
+          <img src="https://png.pngtree.com/png-vector/20191021/ourmid/pngtree-vector-question-mark-icon-png-image_1834249.jpg" alt="Проект 3" class="card w-full h-auto rounded mb-4">
+          <h3 class="text-2xl font-semibold text-gray-300">???</h3>
+          <p class="text-gray-500">???</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-4 fade-in slide-in">
+    <p class="text-gray-600">© 2024 Elytrya__. Все права съедены.</p>
+  </footer>
+
+</body>
+</html>
