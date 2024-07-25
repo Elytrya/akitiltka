@@ -1,0 +1,30 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "concurrently \"nuxt dev\" \"node server/server.js\" \"node server/color_swticher.js\"",
+    "generate": "nuxt generate",
+    "preview": "concurrently \"nuxt preview\" \"node server/server.js\" \"node server/color_switcher.js\"",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "btoa": "^1.2.1",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "node-vibrant": "^3.2.1-alpha.1",
+    "nuxt": "^3.12.4",
+    "open": "^10.1.0",
+    "querystring": "^0.2.1",
+    "tinycolor2": "^1.6.0",
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "concurrently": "^8.0.1",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.6"
+  }
+}

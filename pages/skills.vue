@@ -1,0 +1,241 @@
+<template>
+  <div class="container">
+    <div class="header">
+      <h1>Мои навыки</h1>
+    </div>
+
+    <div class="skills">
+      <div v-for="skill in skills" :key="skill.name" class="skill-card">
+        <div class="skill-content">
+          <div class="skill-name">{{ skill.name }}</div>
+          <div class="skill-description">{{ skill.description }}</div>
+          <div class="skill-progress">
+            <div class="progress-container">
+              <div class="progress-bar" :style="{ width: skill.progress + '%' }"></div>
+            </div>
+            <div class="progress-percentage">{{ skill.progress }}%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="back-button" href="/">Вернутся назад</a>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      skills: [
+        {
+          name: 'JavaScript',
+          description: 'На данном уровне я обладаю хорошими знаниями JavaScript, включая основы языка и принципы работы с современными фреймворками и библиотеками, такими как React и Vue.',
+          progress: 50
+        },
+        {
+          name: 'Python',
+          description: 'Владею Python на уверенном уровне. Имею опыт работы с популярными библиотеками, такими как Flask, и Disnake',
+          progress: 60
+        }
+        // Добавьте больше навыков при необходимости
+      ]
+    };
+  },
+  methods: {
+    goBack() {
+      window.history.back();
+    }
+  }
+};
+</script>
+
+<style scoped>
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #1c1c1c;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 48px;
+  margin: 0;
+  background: linear-gradient(to right, #4f3eec, #0c3a7a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideInLeft 1s ease-in-out;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.skill-card {
+  background: linear-gradient(145deg, #2b2b2b, #3a3a3a);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.skill-content {
+  text-align: left;
+}
+
+.skill-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+  animation: slideInRight 1s ease-in-out;
+}
+
+.skill-description {
+  font-size: 16px;
+  color: #cccccc;
+  margin-bottom: 20px;
+  animation: slideInRight 1.2s ease-in-out;
+}
+
+.skill-progress {
+  display: flex;
+  align-items: center;
+}
+
+.progress-container {
+  background-color: #444;
+  border-radius: 5px;
+  overflow: hidden;
+  flex-grow: 1;
+  margin-right: 10px;
+  height: 10px;
+}
+
+.progress-bar {
+  height: 10px;
+  background: linear-gradient(90deg, #4f3eec, #0c3a7a);
+  width: 0;
+  animation: growBar 2s ease forwards;
+}
+
+.progress-percentage {
+  font-size: 14px;
+  color: #cccccc;
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4f3eec;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background-color: #3c2fb6;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes growBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 36px;
+  }
+
+  .skill-card {
+    padding: 15px;
+  }
+
+  .skill-name {
+    font-size: 20px;
+  }
+
+  .skill-description {
+    font-size: 14px;
+  }
+
+  .progress-percentage {
+    font-size: 12px;
+  }
+}
+</style>

@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #131313;
+  color: #e0e0e0;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #131313;
+}
+
+.project-detail, .projects-list {
+  flex: 1;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+  margin: 0 10px;
+  overflow-y: auto;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.project-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.selected-project {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #4f3eec, #7669f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 10px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.page-subtitle {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #a0a0a0;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.blog-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.blog-header h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.project-status {
+  font-size: 18px;
+  color: #4f3eec;
+}
+
+.blog-content {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.blog-content p,
+.blog-content ul {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.blog-content ul {
+  padding-left: 20px;
+}
+
+.blog-content a {
+  color: #7669f3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.blog-content a:hover {
+  color: #0c3a7a;
+  text-decoration: underline;
+}
+
+.instruction p {
+  font-size: 24px;
+  text-align: center;
+  color: #4f3eec;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 10px;
+  background-color: #2a2a2a;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.project-card:hover {
+  background-color: #393939;
+  transform: scale(1.05);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.project-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.project-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-icon img {
+  transform: rotate(360deg);
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-info h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.project-info p {
+  font-size: 16px;
+  color: #e0e0e0;
+  margin-bottom: 5px;
+}
+
+.project-status {
+  font-size: 14px;
+  color: #7164e6;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.back-button, .home-button {
+  padding: 10px 20px;
+  background: linear-gradient(to right, #4f3eec, #0c3a7a);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover, .home-button:hover {
+  background: #0c3a7a;
+  transform: scale(1.05);
+}
+
